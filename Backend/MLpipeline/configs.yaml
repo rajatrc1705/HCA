@@ -1,0 +1,38 @@
+features:
+  - releaseyear
+  - key
+  - acousticness
+  - danceability
+  - energy
+  - instrumentalness
+  - liveness
+  - loudness
+  - speechiness
+  - valence
+  - tempo
+  - Electronic_onehot
+  - Experimental_onehot
+  - Folk/Country_onehot
+  - Global_onehot
+  - Jazz_onehot
+  - Metal_onehot
+  - Other_onehot
+  - Pop/R&B_onehot
+  - Rap_onehot
+  - Rock_onehot
+
+target: score
+
+model_type: gradient_boosting_regressor
+
+hyper_parameters:
+  n_estimators: 200
+  learning_rate: 0.05
+
+test_size: 0.2
+
+scaler_parameters:
+  feature_range: [0, 1]
+  clip: True
+
+data_filepath: './data/pitchfork.csv'

@@ -1,0 +1,1 @@
+EXERCISE_MAPPING = {"Squats": 1, "Pushups":2, "Bicep Curls": 3}
